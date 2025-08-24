@@ -12,7 +12,7 @@
     /* Animation machine à écrire */
     .typing-text {
       display: inline-block;
-      border-right: 2px solid #d946ef; /* curseur rose */
+      border-right: 2px solid #ec4899; /* curseur rosé */
       white-space: nowrap;
       overflow: hidden;
       width: 0;
@@ -20,19 +20,11 @@
     }
     @keyframes typing {
       from { width: 0 }
-      to { width: 25ch }
+      to { width: 30ch }
     }
     @keyframes blink {
       0%, 100% { border-color: transparent }
-      50% { border-color: #d946ef }
-    }
-
-    /* Texte dégradé */
-    .gradient-text {
-      background: linear-gradient(to right, #ec9ecf, #c6b6f5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      50% { border-color: #ec4899 }
     }
   </style>
 </head>
@@ -52,27 +44,29 @@
   </header>
 
   <!-- Hero -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 via-pink-50 to-purple-100 relative">
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-pink-200 via-purple-200 to-pink-100 text-gray-900 relative">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       
       <!-- Texte -->
       <div class="text-center md:text-left" data-aos="fade-right">
-        
-        <h2 class="text-3xl md:text-4xl font-bold">
-          <span id="nom" class="typing-text gradient-text"></span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">
+          <span class="typing-text">Bonjour, je suis Rayen Radhouani 👋</span>
         </h2>
-        <p id="titre" class="text-lg md:text-xl mb-6 text-gray-700 mt-3"></p>
-        
-        <a href="#contact" class="bg-gradient-to-r from-pink-200 to-purple-200 text-gray-900 px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition">
+        <p class="text-lg md:text-xl mb-6 text-gray-700">
+          Développeuse Web & Mobile | Étudiante en Cybersécurité
+        </p>
+        <a href="#contact" class="bg-gray-900 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition">
           Contactez-moi
         </a>
       </div>
 
       <!-- Photo -->
       <div class="flex justify-center md:justify-end" data-aos="fade-left">
-        <img src="image.jpeg"
-             alt="Photo de Rayen Radhouani" 
-             class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-2xl">
+        <div class="p-1 rounded-full bg-gradient-to-tr from-pink-200 via-pink-100 to-purple-200 shadow-xl">
+          <img src="image.jpeg"
+               alt="Photo de Rayen Radhouani" 
+               class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-2xl">
+        </div>
       </div>
 
     </div>
@@ -99,14 +93,18 @@
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Compétences</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">HTML</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">CSS</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">JavaScript</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">PHP</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">Java</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">Android Studio</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">SQL</div>
-        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition" data-aos="flip-left">Cybersécurité</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Java</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Java EE (Servlets, JSP)</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">PHP</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">JavaScript</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">HTML & CSS</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Android (Java)</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">SQL / MySQL</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Firebase</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Tailwind CSS & Bootstrap</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">UML</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Scrum (Agile)</div>
+        <div class="p-6 bg-white rounded-xl shadow hover:scale-105 transition" data-aos="flip-left">Cybersécurité</div>
       </div>
     </div>
   </section>
@@ -118,36 +116,66 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Projet 1 -->
-        <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-xl hover:scale-105 transition" data-aos="fade-up">
-          <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Application de Location" class="rounded mb-4">
-          <h3 class="font-bold text-lg mb-2">Application de Location</h3>
-          <p class="text-gray-700 mb-3">
-            Développement d’une application web en Java EE permettant la location de biens (voitures, maisons, équipements). 
-            Gestion des annonces, réservation, suivi des locations et interface intuitive pour les utilisateurs.
-          </p>
-          <a href="#" class="text-gray-900 hover:underline">Voir plus</a>
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Application école" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Application École Primaire</h3>
+          <p class="text-gray-700 mb-3">Application mobile (parents/enfants) + application web (enseignants/admins) pour le suivi éducatif et la communication.</p>
         </div>
 
         <!-- Projet 2 -->
-        <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Gestion de Bibliothèque" class="rounded mb-4">
-          <h3 class="font-bold text-lg mb-2">Gestion de Bibliothèque</h3>
-          <p class="text-gray-700 mb-3">
-            Conception d’une plateforme de gestion de bibliothèque pour étudiants et administrateurs. 
-            Gestion des livres, suivi des emprunts et retours, ainsi que la gestion des examens et ressources pédagogiques.
-          </p>
-          <a href="#" class="text-gray-900 hover:underline">Voir plus</a>
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Location de biens" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Application de Location</h3>
+          <p class="text-gray-700 mb-3">Plateforme web en Java EE pour la location de voitures, maisons et équipements avec gestion des annonces et réservations.</p>
         </div>
 
         <!-- Projet 3 -->
-        <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="400">
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up" data-aos-delay="400">
           <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" alt="TaskEasy" class="rounded mb-4">
           <h3 class="font-bold text-lg mb-2">TaskEasy</h3>
-          <p class="text-gray-700 mb-3">
-            Développement de TaskEasy, une plateforme numérique pour la gestion des tâches et projets étudiants. 
-            Création et organisation de projets collaboratifs, suivi des tâches et deadlines, notifications et espace de travail partagé.
-          </p>
-          <a href="#" class="text-gray-900 hover:underline">Voir plus</a>
+          <p class="text-gray-700 mb-3">Plateforme numérique de gestion de tâches et projets étudiants avec deadlines, suivi collaboratif et notifications.</p>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/210241/pexels-photo-210241.jpeg" alt="Gestion de stock" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Gestion de Stock</h3>
+          <p class="text-gray-700 mb-3">Application web de gestion des pièces automobiles avec filtres (prix, marque, type), suivi des entrées/sorties et statistiques.</p>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/3184634/pexels-photo-3184634.jpeg" alt="Gestion du personnel" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Gestion du Personnel</h3>
+          <p class="text-gray-700 mb-3">Application permettant la gestion des employés, suivi des tâches et informations administratives.</p>
+        </div>
+
+        <!-- Projet 6 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/256658/pexels-photo-256658.jpeg" alt="Gestion de bibliothèque" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Gestion de Bibliothèque</h3>
+          <p class="text-gray-700 mb-3">Plateforme de gestion des livres, étudiants et examens avec système d’emprunt, recherche et retour.</p>
+        </div>
+
+        <!-- Projet 7 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/861308/pexels-photo-861308.jpeg" alt="Site enfants autistes" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Site pour enfants autistes</h3>
+          <p class="text-gray-700 mb-3">Site web interactif avec test d’autisme, jeux éducatifs et vidéos d’apprentissage adaptés.</p>
+        </div>
+
+        <!-- Projet 8 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg" alt="Application sécurité" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Application de Sécurité Personnelle</h3>
+          <p class="text-gray-700 mb-3">Application mobile Android permettant d’envoyer une alerte et partager sa localisation en cas d’urgence.</p>
+        </div>
+
+        <!-- Projet 9 -->
+        <div class="bg-gray-100 p-6 rounded-xl shadow hover:scale-105 transition" data-aos="fade-up">
+          <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" alt="E-commerce" class="rounded mb-4">
+          <h3 class="font-bold text-lg mb-2">Sites E-commerce</h3>
+          <p class="text-gray-700 mb-3">Création de sites e-commerce modernes (Wix & WordPress) avec gestion des produits, panier et paiement en ligne.</p>
         </div>
 
       </div>
@@ -176,14 +204,6 @@
     AOS.init({
       duration: 1000,
       once: true
-    });
-
-    // Animation machine à écrire
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("nom").textContent = "Rayen Radhouani 👋";
-      setTimeout(() => {
-        document.getElementById("titre").textContent = "Développeuse Web & Mobile | Étudiante en Cybersécurité";
-      }, 4500);
     });
   </script>
 </body>
