@@ -11,17 +11,21 @@
   <style>
     /* Animation machine à écrire */
     .typing-text {
-      display: inline-block;
-      border-right: 2px solid #ec4899; /* curseur rosé */
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 30ch }
-    }
+  display: inline-block;
+  border-right: 2px solid #ec4899;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
+  max-width: 100%; /* s’assure que ça ne déborde pas sur mobile */
+  text-align: center; /* force le centrage sur mobile */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100%; } /* au lieu de 30ch */
+}
+
     @keyframes blink {
       0%, 100% { border-color: transparent }
       50% { border-color: #ec4899 }
@@ -63,9 +67,12 @@
       
       <!-- Texte -->
       <div class="text-center md:text-left " data-aos="fade-right">
+ <div class="text-center md:text-left" data-aos="fade-right">
   <h2 class="text-3xl md:text-5xl font-bold mb-4">
     <span class="typing-text">Bonjour, je suis Rayen Radhouani</span>
   </h2>
+</div>
+
         <p class="text-lg md:text-xl mb-6 text-gray-700">
           Développeuse Web & Mobile | Étudiante en Cybersécurité
         </p>
@@ -386,6 +393,7 @@
 </script>
 </body>
 </html>
+
 
 
 
