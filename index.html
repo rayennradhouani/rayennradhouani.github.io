@@ -9,17 +9,16 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
-/* Animation du gradient sur le texte */
-/* Animation du gradient sur le texte */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-gradient-text {
-  background-size: 200% 200%;
-  animation: gradientMove 3s ease infinite;
+/* Animation moderne fade + slide */
+.animated-text {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  margin: 10px 0;
+  line-height: 1.3;
+  word-wrap: break-word; /* Permet retour à la ligne automatique */
+  text-align: center;
 }
 
 /* Décalage progressif pour chaque élément */
@@ -401,6 +400,7 @@
 </script>
 </body>
 </html>
+
 
 
 
