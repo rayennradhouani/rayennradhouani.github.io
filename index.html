@@ -9,7 +9,20 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
-   /* Animation machine à écrire */ .typing-text { display: inline-block; border-right: 2px solid #ec4899; /* curseur rosé */ white-space: nowrap; overflow: hidden; width: 0; animation: typing 4s steps(30, end) forwards, blink 0.8s infinite; } @keyframes typing { from { width: 0 } to { width: 30ch } }
+   /* Animation machine à écrire */ 
+    .typing-text {
+  display: inline-block;
+  border-right: 2px solid #ec4899; /* curseur rosé */
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%; /* s'adapte à l'écran */
+  animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
     @keyframes blink {
       0%, 100% { border-color: transparent }
@@ -374,6 +387,7 @@
 </script>
 </body>
 </html>
+
 
 
 
