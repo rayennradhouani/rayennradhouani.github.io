@@ -11,21 +11,29 @@
   <style>
     
     /* Animation machine à écrire */
-    .typing-text { display: inline-block; border-right: 2px solid #ec4899; 
-   /* curseur rosé */ white-space: nowrap; overflow: hidden;
-   width: 0; animation: typing 4s steps(30, end) forwards, blink 0.8s infinite; } 
+.typing-text {
+  display: inline-block;
+  border-right: 2px solid #ec4899; /* curseur rosé */
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
   
-  
-    @keyframes blink { 0%, 100% { border-color: transparent } 50% { border-color: #ec4899 }
+  /* 🔥 CORRECTION */
+  white-space: normal;      /* permet le retour à la ligne */
+  word-break: break-word;   /* coupe si nécessaire */
+  max-width: 100%;          /* jamais dépasser l’écran */
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-    @keyframes blink {
-      0%, 100% { border-color: transparent }
-      50% { border-color: #ec4899 }
-    
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #ec4899 }
+}
+
   .active {
     color: #4f46e5; /* Indigo */
     font-weight: 700;
@@ -384,6 +392,7 @@
 </script>
 </body>
 </html>
+
 
 
 
